@@ -18,7 +18,7 @@ you to control you the width, height, format, orientation and quality of Image. 
 
 <p><b>Add this to your app module's build.gradle file:</b></p>
 <pre><code>dependencies {
-          compile 'com.github.amanjeetsingh150:ImageZipper:1.0'
+          compile 'com.github.amanjeetsingh150:ImageZipper:1.3'
     }
 </code></pre>
 
@@ -62,7 +62,7 @@ you to control you the width, height, format, orientation and quality of Image. 
    </tr>
    <tr>
    <td>setOrientation(int maxHeight)</td>
-   <td>Height required(90,180)</td>
+   <td>Orientation required(90,180)</td>
    </tr>
    <tr>
    <td>setCompressFormat(Bitmap.CompressFormat compressFormat)</td>
