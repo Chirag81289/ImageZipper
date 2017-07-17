@@ -28,9 +28,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     //ButterKnife
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     //compile module
     compile project(':imagezipper')
-    compile 'com.github.angads25:filepicker:1.1.1'
 }
