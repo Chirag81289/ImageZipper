@@ -7,7 +7,7 @@ package com.developers.imagezipper;
 public class OrientationConstants {
 
     public static final int ORIENTATION_90=90;
-    public static final int ORIENTATION_180=90;
-    public static final int ORIENTATION_270=90;
+    public static final int ORIENTATION_180=180;
+    public static final int ORIENTATION_270=270;
 
 }

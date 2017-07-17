@@ -1,5 +1,6 @@
 package com.developers.imagezipperdemo;
 
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,13 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 originalFilePath=files[0];
                 File actualFile=new File(originalFilePath);
                 try {
-                    File imageZipperFile=new ImageZipper(MainActivity.this).setQuality(20).compressToFile(actualFile);
+                    File imageZipperFile=new ImageZipper(MainActivity.this).setQuality(10).setMaxWidth(200).setMaxHeight(200).compressToFile(actualFile);
                     originalImage.setImageBitmap(BitmapFactory.decodeFile(actualFile.getAbsolutePath()));
                     int file_size = Integer.parseInt(String.valueOf(actualFile.length()/1024));
                     int result_file_size = Integer.parseInt(String.valueOf(imageZipperFile.length()/1024));
                     String base64=ImageZipper.getBase64forImage(imageZipperFile);
-                    result.setImageBitmap(new ImageZipper(MainActivity.this).compressToBitmap(actualFile));
+                    result.setImageBitmap(BitmapFactory.decodeFile(imageZipperFile.getAbsolutePath()));
                     Log.d(TAG,base64);
+                    Bitmap b=new ImageZipper(MainActivity.this).compressToBitmap(actualFile);
                     originalSize.setText(file_size+" Kb");
                     compressedSize.setText(result_file_size+" Kb");
                 } catch (Exception e) {
