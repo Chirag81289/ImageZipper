@@ -52,7 +52,7 @@ public class ImageZipper {
         return this;
     }
 
-    public Bitmap compressBitmap(File imageFile) throws IOException {
+    public Bitmap compressToBitmap(File imageFile) throws IOException {
         return Compressor.decodeBitmapAndCompress(imageFile, maxHeight, maxWidth,orientation);
     }
 

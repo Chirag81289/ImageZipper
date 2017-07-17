@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     int file_size = Integer.parseInt(String.valueOf(actualFile.length()/1024));
                     int result_file_size = Integer.parseInt(String.valueOf(imageZipperFile.length()/1024));
                     String base64=ImageZipper.getBase64forImage(imageZipperFile);
-                    result.setImageBitmap(new ImageZipper(MainActivity.this).compressBitmap(actualFile));
+                    result.setImageBitmap(new ImageZipper(MainActivity.this).compressToBitmap(actualFile));
                     Log.d(TAG,base64);
                     originalSize.setText(file_size+" Kb");
                     compressedSize.setText(result_file_size+" Kb");
